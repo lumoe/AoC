@@ -20,7 +20,7 @@ for idx, password in enumerate(passwords):
     if count >= counts[idx][0] and count <= counts[idx][1]:
         found += 1
 
-print("Part 1:", found)
+print('Part 1:', found)
 
 found = 0
 for idx, password in enumerate(passwords):
@@ -30,4 +30,4 @@ for idx, password in enumerate(passwords):
            or (password[counts[idx][1]-1] == rules[idx])):
         found += 1
 
-print("Part 2:", found)
+print('Part 2:', found)
