@@ -24,10 +24,7 @@ print('Part 1:', found)
 
 found = 0
 for idx, password in enumerate(passwords):
-    if (password[counts[idx][0]-1] != password[counts[idx][1]-1]) \
-       and (
-           (password[counts[idx][0] - 1] == rules[idx])
-           or (password[counts[idx][1]-1] == rules[idx])):
+    if ((password[counts[idx][0] - 1] == rules[idx]) ^ (password[counts[idx][1]-1] == rules[idx])):
         found += 1
 
 print('Part 2:', found)
