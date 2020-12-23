@@ -4,27 +4,23 @@ import re
 
 inp = np.array(open('input').read().splitlines())
 
-def get_row(rows, upper, lower):
-    if len(rows) == 0:
+def bin_search(s, upper, lower):
+    if len(s) == 0:
         return upper
-    current = rows.pop()
+    current = s.pop()
     mid = (upper + lower) // 2
     if current in 'FL':
         upper = mid
     else:
         lower = mid
-    return get_row(rows, upper, lower)
+    return bin_search(s, upper, lower)
     
-
-def get_seat_id(bp, rows_limits=(127,0)):
+def get_seat_id(bp):
     rows = list(bp[:7][::-1])
-    row = get_row(rows, rows_limits[0], rows_limits[1])
+    row = bin_search(rows, 127, 0)
     seats = list(bp[7:][::-1])
-    seat = get_row(seats, 7, 0)
+    seat = bin_search(seats, 7, 0)
     return row, seat, row * 8 + seat
-
-
-
 
 seats = [get_seat_id(row)[2] for row in inp]
 lowest_seat = min(seats)
