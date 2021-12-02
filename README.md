@@ -1,6 +1,9 @@
 # Advent of code 2021
 
+Trying to solve the challenges with a "data science approach", meaning that numpy and pandas is used extensively.
+
 - Day 01 | ⭐⭐
+- Day 02 | ⭐⭐
 
 # Advent of code 2020
 
