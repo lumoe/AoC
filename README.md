@@ -2,6 +2,7 @@
 
 - Day 01 | ⭐⭐
 - Day 02 | ⭐⭐
+- Day 03 | ⭐⭐
 
 # Advent of code 2021
 
